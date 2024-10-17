@@ -40,7 +40,7 @@ This project is a web application built using Streamlit to perform data cleaning
    bash
    Copy code
    streamlit run app.py
-   Open your browser and go to edadc-07.streamlit.app to interact with the app.
+   Open your browser and go to https://edadc-07.streamlit.app to interact with the app.
 
 ## Usage
    1. Upload a CSV file using the file uploader widget.
