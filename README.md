@@ -28,6 +28,7 @@ You can install the required packages using pip:
 ```bash
 pip install pandas numpy streamlit matplotlib seaborn
 
+
 ## How to Run
    Clone this repository or download the code.
    Navigate to the directory containing the script.
@@ -36,6 +37,8 @@ pip install pandas numpy streamlit matplotlib seaborn
    Copy code
    streamlit run app.py
 Open the provided URL in your web browser to access the application.
+
+
 ## Contributing
 Contributions are welcome! If you have suggestions for improvements or additional features, please feel free to submit a pull request.
 
