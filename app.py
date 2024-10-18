@@ -54,10 +54,27 @@ if uploaded_file is not None:
             st.pyplot(plt)
 
     # Correlation Matrix
+    # Display data types for debugging
+    st.write("Data Types:", df.dtypes)
+
+    # Correlation Matrix
     st.write("### Correlation Matrix")
-    corr_matrix = df.corr()
-    sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', square=True)
-    st.pyplot(plt)
+    try:
+        # Convert all columns to numeric where possible
+        df_numeric = df.apply(pd.to_numeric, errors='coerce')
+    
+        # Filter for numeric columns only
+        numeric_df = df_numeric.select_dtypes(include=[np.number])
+    
+        if numeric_df.empty:
+            st.write("No numeric columns available for correlation analysis.")
+        else:
+            corr_matrix = numeric_df.corr()
+            sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', square=True)
+            st.pyplot(plt)
+            plt.clf()  # Clear the figure for the next plot
+    except Exception as e:
+        st.write("An error occurred while calculating the correlation matrix:", e)
 
     # Box Plots
     st.write("### Box Plots")
