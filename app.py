@@ -1,8 +1,9 @@
-import pandas as pd#type:ignore
-import numpy as np#type:ignore
-import streamlit as st#type:ignore
-import matplotlib.pyplot as plt#type:ignore
-import seaborn as sns#type:ignore
+import pandas as pd
+import numpy as np
+import streamlit as st
+import matplotlib.pyplot as plt
+import seaborn as sns
+import random
 
 # Title of the app
 st.title("Data Cleaning and EDA Chatbot")
@@ -68,5 +69,23 @@ if uploaded_file is not None:
             plt.ylabel('Value')
             st.pyplot(plt)
 
+# Chatbot Section
+st.header("Chatbot")
+user_input = st.text_input("Type your message here:")
+
+if user_input:
+    # Simple response logic with funky replies
+    if "hello" in user_input.lower():
+        responses = ["Hi pookie! 🌟", "Hello there, superstar! ✨", "Hey, you fabulous human! 😄"]
+        st.write(random.choice(responses))
+    elif "data" in user_input.lower():
+        responses = ["Data? Oh, I love data! Let's dive in! 🏊‍♂️", "Data is my jam! What do you need? 🎶"]
+        st.write(random.choice(responses))
+    elif "help" in user_input.lower():
+        responses = ["Help? I'm here to save the day! 🦸‍♂️", "Need help? I'm your trusty sidekick! 🤖"]
+        st.write(random.choice(responses))
+    else:
+        responses = ["I'm not sure what you mean, but I'm all ears! 👂", "Can you rephrase that? My circuits are a bit tangled! 🤔"]
+        st.write(random.choice(responses))
 else:
-    st.info("Please upload a CSV file to get started.")
+    st.write("Feel free to ask me anything about data cleaning or EDA! I'm here to help! 🎉")
