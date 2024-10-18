@@ -27,7 +27,7 @@ To run this application, you need to have the following Python packages installe
 You can install the required packages using pip:
 ```bash
 pip install pandas numpy streamlit matplotlib seaborn
-
+```
 
 ## How to Run
    Clone this repository or download the code.
