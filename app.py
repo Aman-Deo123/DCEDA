@@ -100,7 +100,6 @@ if user_input:
             "Hey, you fabulous human! 😄"
         ]
         st.write(random.choice(responses))
-
     elif "help" in user_input.lower():
         responses = [
             "Help? I'm here to save the day! 🦸‍♂️", 
@@ -120,13 +119,13 @@ if user_input:
             "It's a crucial step in data analysis to understand patterns and anomalies! Want to learn more? 🔍"
         ]
         st.write(random.choice(responses))
-    elif "Who are you" in user_input.lower():
+    elif "Who are you" or "tell me about yourself " in user_input.lower():
         responses = [
             "I am a bot created by Aman, here to assist you! 🤖",
             "Just your friendly neighborhood data assistant created by Aman! How can I help? 🌐"
         ]
-        st.write(random.choice(responses))
-    elif "who is Satyam" in user_input.lower() or "who is Anshuman" in user_input.lower():
+        st.write(random.choice(responses)) 
+    elif "Satyam" or "Aman" or " Anshuman"  in user_input.lower() :
         responses = [
             "He is the owner's very good friend! They both play games together. 🎮",
             "He is great pal of my owner! They enjoy gaming together! 🕹️"
