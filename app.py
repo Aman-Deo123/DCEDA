@@ -100,13 +100,7 @@ if user_input:
             "Hey, you fabulous human! 😄"
         ]
         st.write(random.choice(responses))
-    elif "data" in user_input.lower():
-        responses = [
-            "Data? Oh, I love data! Let's dive in! 🏊‍♂️", 
-            "Data is my jam! What do you need? 🎶",
-            "What do you want to know about data cleaning or EDA? 🤔"
-        ]
-        st.write(random.choice(responses))
+
     elif "help" in user_input.lower():
         responses = [
             "Help? I'm here to save the day! 🦸‍♂️", 
