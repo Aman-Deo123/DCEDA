@@ -126,10 +126,10 @@ if user_input:
             "It's a crucial step in data analysis to understand patterns and anomalies! Want to learn more? 🔍"
         ]
         st.write(random.choice(responses))
-    elif "who are you" in user_input.lower():
+    elif "Who are you" in user_input.lower():
         responses = [
             "I am a bot created by Aman, here to assist you! 🤖",
-            "Just your friendly neighborhood data assistant! How can I help? 🌐"
+            "Just your friendly neighborhood data assistant created by Aman! How can I help? 🌐"
         ]
         st.write(random.choice(responses))
     elif "who is Satyam" in user_input.lower() or "who is Anshuman" in user_input.lower():
