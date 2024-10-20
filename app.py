@@ -89,20 +89,60 @@ if uploaded_file is not None:
 # Chatbot Section
 st.header("Chatbot")
 user_input = st.text_input("Type your message here:")
+import random
 
 if user_input:
     # Simple response logic with funky replies
     if "hello" in user_input.lower():
-        responses = ["Hi pookie! 🌟", "Hello there, superstar! ✨", "Hey, you fabulous human! 😄"]
+        responses = [
+            "Hi pookie! 🌟", 
+            "Hello there, superstar! ✨", 
+            "Hey, you fabulous human! 😄"
+        ]
         st.write(random.choice(responses))
     elif "data" in user_input.lower():
-        responses = ["Data? Oh, I love data! Let's dive in! 🏊‍♂️", "Data is my jam! What do you need? 🎶"]
+        responses = [
+            "Data? Oh, I love data! Let's dive in! 🏊‍♂️", 
+            "Data is my jam! What do you need? 🎶",
+            "What do you want to know about data cleaning or EDA? 🤔"
+        ]
         st.write(random.choice(responses))
     elif "help" in user_input.lower():
-        responses = ["Help? I'm here to save the day! 🦸‍♂️", "Need help? I'm your trusty sidekick! 🤖"]
+        responses = [
+            "Help? I'm here to save the day! 🦸‍♂️", 
+            "Need help? I'm your trusty sidekick! 🤖",
+            "Just ask away, and I'll do my best to assist you! 💪"
+        ]
+        st.write(random.choice(responses))
+    elif "data cleaning" in user_input.lower():
+        responses = [
+            "Data cleaning involves removing or correcting inaccurate records from a dataset. Need more info? 📊",
+            "It's all about ensuring your data is accurate and usable! What else would you like to know? 🧹"
+        ]
+        st.write(random.choice(responses))
+    elif "eda" in user_input.lower() or "exploratory data analysis" in user_input.lower():
+        responses = [
+            "EDA is the process of analyzing data sets to summarize their main characteristics, often using visual methods. 📈",
+            "It's a crucial step in data analysis to understand patterns and anomalies! Want to learn more? 🔍"
+        ]
+        st.write(random.choice(responses))
+    elif "who are you" in user_input.lower():
+        responses = [
+            "I am a bot created by Aman, here to assist you! 🤖",
+            "Just your friendly neighborhood data assistant! How can I help? 🌐"
+        ]
+        st.write(random.choice(responses))
+    elif "who is Satyam" in user_input.lower() or "who is Anshuman" in user_input.lower():
+        responses = [
+            "He is the owner's very good friend! They both play games together. 🎮",
+            "He is great pal of my owner! They enjoy gaming together! 🕹️"
+        ]
         st.write(random.choice(responses))
     else:
-        responses = ["I'm not sure what you mean, but I'm all ears! 👂", "Can you rephrase that? My circuits are a bit tangled! 🤔"]
+        responses = [
+            "I'm not sure what you mean, but I'm all ears! 👂", 
+            "Can you rephrase that? My circuits are a bit tangled! 🤔"
+        ]
         st.write(random.choice(responses))
 else:
     st.write("Feel free to ask me anything about data cleaning or EDA! I'm here to help! 🎉")
