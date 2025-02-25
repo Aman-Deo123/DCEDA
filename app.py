@@ -51,8 +51,13 @@ st.subheader("🤖 AI Chatbot")
 user_input = st.text_input("Ask me anything:")
 
 # Google Custom Search API Key & Search Engine ID
-GOOGLE_API_KEY = "AI********"  # 🔑 Replace with your API key
-SEARCH_ENGINE_ID = "7220******"  # 🔎 Replace with your Custom Search Engine ID
+import streamlit as st
+import requests
+
+# Fetch API keys from Streamlit Secrets
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+SEARCH_ENGINE_ID = st.secrets["SEARCH_ENGINE_ID"]
+ 
 
 def google_search(query):
     """Search Google using Custom Search API and return the first Wikipedia link or top result."""
