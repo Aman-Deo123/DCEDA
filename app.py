@@ -55,8 +55,8 @@ import streamlit as st
 import requests
 
 # Fetch API keys from Streamlit Secrets
-GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
-SEARCH_ENGINE_ID = st.secrets["SEARCH_ENGINE_ID"]
+GOOGLE_API_KEY = "AIzaSyDxGT6GCyft5sHeCbV3qIe487tQ2lou_Bo"
+SEARCH_ENGINE_ID = "7220b7d5a05ef48e0"
  
 
 def google_search(query):
